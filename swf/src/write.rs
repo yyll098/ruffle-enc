@@ -31,7 +31,7 @@ use std::io::{self, Write};
 pub fn write_swf<W: Write>(header: &Header, tags: &[Tag<'_>], mut output: W) -> Result<()> {
     let signature = match header.compression {
         Compression::None => b"FWS",
-        Compression::Zlib => b"CWS",
+        Compression::Zlib => b"C01",
         Compression::Lzma => b"ZWS",
     };
     output.write_all(&signature[..])?;
