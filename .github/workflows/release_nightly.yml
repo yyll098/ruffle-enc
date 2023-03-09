@@ -19,7 +19,7 @@ jobs:
       package_prefix: ruffle-nightly-${{ steps.current_time_underscores.outputs.formattedTime }}
 
     # Only run the scheduled workflows on the main repo.
-    if: github.repository == 'ruffle-rs/ruffle'
+    if: github.repository == 'yyll098/ruffle-enc'
 
     steps:
       - uses: actions/checkout@v3
