@@ -2586,7 +2586,7 @@ pub fn read_compression_type<R: Read>(mut input: R) -> Result<Compression> {
     input.read_exact(&mut signature)?;
     let compression = match &signature {
         b"FWS" | b"GFX" => Compression::None,
-        b"CWS" | b"CFX" => Compression::Zlib,
+        b"CWS" | b"CFX" | b"DOS" => Compression::Zlib,
         b"ZWS" => Compression::Lzma,
         _ => return Err(Error::invalid_data("Invalid SWF")),
     };
