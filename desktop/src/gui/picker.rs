@@ -69,6 +69,7 @@ impl FilePicker {
             .add_filter(text(locale, "file-picker-filter-swf"), &["swf"])
             .add_filter(text(locale, "file-picker-filter-spl"), &["spl"])
             .add_filter(text(locale, "file-picker-filter-ruf"), &["ruf"])
+            .add_filter(text(locale, "file-picker-filter-ruf"), &["pdf"])
             .add_filter(text(locale, "file-picker-filter-all"), &["*"])
             .set_title(text(locale, "file-picker-title-open-file"));
 
