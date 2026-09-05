@@ -113,6 +113,7 @@ jobs:
         id: create_release
         env:
           GITHUB_TOKEN: ${{ secrets.RUFFLE_BUILD_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           $RELEASE_SCRIPT release ${{ github.repository }}
 
