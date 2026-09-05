@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          token: ${{ secrets.RUFFLE_BUILD_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure release
         id: configure
